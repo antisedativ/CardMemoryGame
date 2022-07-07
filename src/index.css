@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+}
+
+body {
+  /* background: linear-gradient(90deg, #c9b6bc,#e0e5eb); */
+  font-family: 'Luckiest Guy', cursive;
+  background: url("/public/icon/back.png") no-repeat;
+  background-size: auto, auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  user-select: none;
+  font-family: 'Luckiest Guy', cursive;
+  letter-spacing: 4px;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+p {
+  user-select: none;
+}
+
+.container {
+  height: 500px;
+  width: 700px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1em;
+}
+
+.card {
+  background: #eac9ed;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transform: rotateY(0);
+  transform-style: preserve-3d;
+  transition: 0.6s cubic-bezier(0.38, 0.02, 0.09, 1.66) all;
+}
+
+.card img {
+  user-select: none;
+  transform: scale(0);
+  height: 60%;
+  width: 60%;
+}
+
+@keyframes Image {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card.active {
+  background: rgb(251, 232, 246);
+  transform: rotateY(180deg);
+}
+
+.active img{
+   user-select: none;
+   transform: scale(1);
+   animation: 0.5s hideImage linear;
+}
+
+.card.correct {
+  border: 3px solid rgb(167, 207, 106);
+}
+
+.card.wrong {
+  transform: rotateY(180deg);
+  border: 3px solid rgb(220, 90, 112);
+}
+
+.restart {
+  cursor: pointer;
+  width: 700px;
+  margin-top: 15px;
+  font-weight: bold;
+  font-style: 18px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.restart {
+  user-select: none;
+  cursor: pointer;
+  background: #daadde;
+  border: 1px solid black;
+  width: 700px;
+  height: 40px;
+  margin-top: 20px;
+  font-weight: bold;
+  font-style: 18px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.restart:hover {
+  transition: transform 0.2s;
+  transform: scale(1.02);
+}
+
+.moves {
+  font-weight: bold;
+  font-style: 14px;
+  margin-bottom: 10px;
+}
+
