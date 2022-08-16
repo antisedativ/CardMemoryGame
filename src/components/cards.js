@@ -2,21 +2,28 @@ import { useState } from 'react'
 
 import Card from './card'
 
+import glasses from '../icon/glasses.png'
+import mask from '../icon/mask.png'
+import photo from '../icon/photo.png'
+import slippers from '../icon/slippers.png'
+import surf from '../icon/surf.png'
+import sunbed from '../icon/sunbed.png'
+
 function Cards() {
 
     const [items, setItems] = useState([
-        { id: 1, key: 1, img: '/icon/glasses.png', stat: "" },
-        { id: 1, key: 2, img: '/icon/glasses.png', stat: "" },
-        { id: 2, key: 3, img: '/icon/mask.png', stat: "" },
-        { id: 2, key: 4, img: '/icon/mask.png', stat: "" },
-        { id: 3, key: 5, img: '/icon/slippers.png', stat: "" },
-        { id: 3, key: 6, img: '/icon/slippers.png', stat: "" },
-        { id: 4, key: 7, img: '/icon/photo.png', stat: "" },
-        { id: 4, key: 8, img: '/icon/photo.png', stat: "" },
-        { id: 5, key: 9, img: '/icon/sunbed.png', stat: "" },
-        { id: 5, key: 10, img: '/icon/sunbed.png', stat: "" },
-        { id: 6, key: 11, img: '/icon/surf.png', stat: "" },
-        { id: 6, key: 12, img: '/icon/surf.png', stat: "" }
+        { id: 1, key: 1, img: glasses, stat: "" },
+        { id: 1, key: 2, img: glasses, stat: "" },
+        { id: 2, key: 3, img: mask, stat: "" },
+        { id: 2, key: 4, img: mask, stat: "" },
+        { id: 3, key: 5, img: slippers, stat: "" },
+        { id: 3, key: 6, img: slippers, stat: "" },
+        { id: 4, key: 7, img: photo, stat: "" },
+        { id: 4, key: 8, img: photo, stat: "" },
+        { id: 5, key: 9, img: sunbed, stat: "" },
+        { id: 5, key: 10, img: sunbed, stat: "" },
+        { id: 6, key: 11, img: surf, stat: "" },
+        { id: 6, key: 12, img: surf, stat: "" }
     ].sort(() => Math.random() - 0.5))
 
     const [prev, setPrev] = useState(-1)
