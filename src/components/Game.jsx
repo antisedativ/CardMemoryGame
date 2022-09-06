@@ -65,7 +65,9 @@ function Game() {
     }
 
     function restart() {
-        setRecord(moves)
+        if(record > moves || record === 0)
+            setRecord(moves)
+
         setMoves(0)
         setCorrect(0)
         items.map(item => {
@@ -79,7 +81,7 @@ function Game() {
     return (
         <div className='wrapper'>
             {
-                correct === 1
+                correct === 6
                     ? <EndOfTheGame  score={moves}/>
                     : <div>
                         <h1>Card Memory Game</h1>
