@@ -4,7 +4,7 @@ const EndOfTheGame = ({score}) => {
     return (
         <div className="end_game">
             <div className="end_game-title">
-                you won!!!
+                you win!!!
             </div>
             <div className="end_game-score">
                 Score: {score}

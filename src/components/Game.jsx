@@ -72,7 +72,7 @@ function Game() {
         setCorrect(0)
         items.map(item => {
             item.stat = ""
-            setItems([...items].sort(() => Math.random() - 0.5))
+            setItems([...items].sort(() => Math.random()))
         })
         items[prev].stat = ""
         setPrev(-1)
@@ -86,8 +86,8 @@ function Game() {
                     : <div>
                         <h1>Card Memory Game</h1>
                         <div className="description">
-                            <p className='moves'>Сделано ходов:  { moves }</p>
-                            <p className='moves'>Ваш рекорд:  { record }</p>
+                            <p className='moves'>Moves:  { moves }</p>
+                            <p className='moves'>Best score:  { record }</p>
                         </div>
                         <div className="container">
                             {items.map((item, index) => (
@@ -97,7 +97,7 @@ function Game() {
 
                     </div>
             }
-            <button className='restart' onClick={restart}><p className="restart_text">Начать заново!</p></button>
+            <button className='restart' onClick={restart}><p className="restart_text">Restart</p></button>
         </div>
     )
 }
