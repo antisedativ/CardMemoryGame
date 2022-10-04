@@ -2,7 +2,7 @@
 - Попробовать можно [здесь](https://card-memory-game-ij56hgvj7-antisedativ.vercel.app/) или по ссылке в описании репозитория.
 ## 🔑 Запуск
 
-### `npm clone [link]`
+### `git clone [link]`
 ### `npm install`
 ### `npm start`
 
